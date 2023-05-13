@@ -4,7 +4,6 @@ services:
   spotifyinfo:
     container_name: spotifyinfo
     hostname: spotifyinfo
-    network_mode: bridge
     build: .
     user: 65534:65534
     read_only: true
@@ -18,3 +17,9 @@ services:
       - no-new-privileges:true
     cap_drop:
       - ALL
+# use if you get the error: ERROR: could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network
+#sudo docker network create "spotifyinfo" --subnet="172.16.0.0/16"
+#networks:
+  #default:
+    #external:
+      #name: spotifyinfo
