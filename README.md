@@ -27,96 +27,29 @@ SpotifyInfo - Get Info On A Spotify Track
   
 ---
 
-## Instances
+## Security Audits:
 
-| Instance URL                                                                                                                                                    |        Country         | Provider   | Notes                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------: | ---------- | ----------------------------------------------- |
-| [spotifyinfo.netlify.app](https://spotifyinfo.netlify.app)                                                                                                                        |          :us:          | Netlify     | Run by [me](https://github.com/nesaku)          |
-| [spotifyinfo.vercel.app](https://spotifyinfo.vercel.app)                                                                                                                        | :us: | Vercel | Run by [me](https://github.com/nesaku)          |
-  
----
+- [Internet.ml](https://internet.nl/site/listen-spotify.whateveritworks.org/2060148/)
+- [Mozilla.org](https://observatory.mozilla.org/)
+- [ImmuniWeb](https://www.immuniweb.com/ssl/listen-spotify.whateveritworks.org/a8FxuGr6/)
+- [HSTS Preload](https://hstspreload.org/)
+- [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=listen-spotify.whateveritworks.org)
+- [Security Headers](https://securityheaders.com/?q=listen-spotify.whateveritworks.org&hide=on&followRedirects=on)
 
-## FAQ
 
-### How Do I Use This?
+## Usage:
 
-There are two ways you can use SpotifyInfo:
+1. Buy [Hetzner.com](https://hetzner.com) it's 100% renewal hardware and you get affordable dedicated servers, and you also help save the world.
 
-1. Visit [spotifyinfo.netlify.app](spotifyinfo.netlify.app) and paste the Spotify track url into the input box.
-2. Replace `https://open.spotify.com` of any url with `spotifyinfo.netlify.app`. Then click the "Fetch Data" button.
-3. Append `https://open.spotify.com` of any url with `spotifyinfo.netlify.app`. Then click the "Fetch Data" button.
+2. Get [Cloudflare](https://cloudflare.com) it's carbon renewal and you help save the world.
 
-### How Does This Work? - Scraping
+3. ```apt install git```
 
-While the [Spotify developer Web API](https://developer.spotify.com/documentation/web-api/) could have been used for this project. I weighed the pros and cons and chose to go with scraping the required content off the track page instead.
+4. ```git clone https://github.com/WhateverItWorks/my-SpotifyInfo-docker-compose.git spotify```
 
-Some of the pros of the Spotify Web API are that it is more stable than scraping, it is more quicker than scraping, good documentation, officially suported, the API has many features and etc. Some of the cons of the Web API are that all requests made are tied to a single developer token, their [Developer Terms of Service](https://developer.spotify.com/terms/) must be followed and that a developer account is required to use the Web API.
+5. ```nano docker-compose.yml```
 
-### Why Is This Slower Than Spotify?
+6. ```docker-compose up -d --build```
 
-When you make a request for a song on SpotifyInfo, your request needs to be first scraped by the scraper from Spotify before the result can be shown to you. This causes a delay from when you make the request to when the result is shown.
 
-### What Do You Do With My Data?
-
-Nothing. Since we don't collect any user data we can't use it
-
-### Why Is This Missing Functionality?
-
-SpotifyInfo, is still a work in progress and new functionality is continually being developed. If you have a certain feature that you would like to see, feel free to open an issue on GitHub
-
-## Installation:
-
-### Manual Installation
-
-**Prerequisites:**
-
-- [Node.js](https://nodejs.org/en/)
-- [Git](https://github.com/git-guides/install-git)
-
-1. Clone the Git Repository
-
-```bash
-git clone https://github.com/nesaku/SpotifyInfo.git
-cd SpotifyInfo
-cp .env.example .env.local
-```
-
-2. Edit the .env file if required
-
-3. Install & Start The Project
-
-```bash
-npm install
-npm run start
-# or
-yarn install
-yarn start
-```
-
----
-
-## Development:
-
-### Built Using
-
-- Next.js
-- Cheerio
-- TailwindCSS
-
-### Getting Started
-
-To run the development server:
-
-```bash
-git clone https://github.com/nesaku/SpotifyInfo.git
-cd SpotifyInfo
-cp .env.example .env.local
-# then
-npm install
-npm run dev
-# or
-yarn install
-yarn dev
-```
-
-**ⓘ If you want use the API directly or run any kind of automation. Please host the API on your own server.**
+```http://localhost:3014```
